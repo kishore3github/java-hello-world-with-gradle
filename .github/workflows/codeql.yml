@@ -39,10 +39,13 @@ jobs:
         run: find build/classes -name '*.class'
         
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
+        uses: github/codeql-action/init@v3
         with:
-          languages: java   
+          languages: java  
+          built-mode: none
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
-        # with:
-        #   category: "/language:${{env.LANGUAGE}}"
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:${{env.LANGUAGE}}"
+
+          
