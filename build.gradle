@@ -50,6 +50,6 @@ sonarqube {
 }
 
 // Wrapper task to use a specific Gradle version
-task wrapper(type: Wrapper) {
-    gradleVersion = '7.4'
-}
+// task wrapper(type: Wrapper) {
+//     gradleVersion = '7.4'
+// }
