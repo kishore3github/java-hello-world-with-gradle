@@ -57,6 +57,19 @@ dependencies {
 }
 // end::dependencies[]
 
+sonar {
+    properties {
+        property "sonar.projectKey", "kishore3github_java-hello-world-with-gradle"
+        property "sonar.token", System.getenv('SONAR_TOKEN')
+        property "sonar.projectVersion", "1.0"
+        property "sonar.organization", "kishore3github"
+        property "sonar.sources", "src" // Change to point directly to your source directory
+        property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.java.source", "17"
+        property "sonar.language", "java"
+        property "sonar.exclusions", "**/build/**, **/*.test.groovy"
+    }
+}
 // tag::wrapper[]
 task wrapper(type: Wrapper) {
     gradleVersion = '7.4'
